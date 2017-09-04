@@ -15,7 +15,8 @@ namespace Kaplan
         private static bool procesResult = false;
         static void Main(string[] args)
         {
-            IWinServicesManager winServiceManager = new WinServicesManagerLogDecorator(new WinServicesManager(AppConfig.ServicesMachine));
+            IWinServicesManager winServiceManager = new WinServicesManagerTimeOutRetryDecorator(
+                new WinServicesManagerLogDecorator(new WinServicesManager(AppConfig.ServicesMachine)));
             IZipManager zipManager = new ZipManagerLogDecorator(new ZipManager());
             IFileManager fileManager = new FileManagerLogDecorator(new FileManager());
             IProcess process = new KaplanProcess(winServiceManager, zipManager, fileManager);

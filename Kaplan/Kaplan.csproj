@@ -49,6 +49,7 @@
     <Compile Include="Config\AppConfig.cs" />
     <Compile Include="Decorators\FileManagerLogDecorator.cs" />
     <Compile Include="Decorators\WinServicesManagerLogDecorator.cs" />
+    <Compile Include="Decorators\WinServicesManagerTimeOutRetryDecorator.cs" />
     <Compile Include="Decorators\ZipManagerLogDecorator.cs" />
     <Compile Include="Utils\Interfaces\IMail.cs" />
     <Compile Include="Utils\Interfaces\IHtmlMessage.cs" />
